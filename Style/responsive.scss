@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+//      Google Fonts     //
+
+//font-family: 'Poppins', sans-serif;
+
+//   ====================
+
+//font-family: 'Lato', sans-serif;
+
+//      Google Fonts     //
+
+@mixin border-radious($value) {
+    border-radius: $value;
+    -webkit-border-radius: $value;
+    -moz-border-radius: $value;
+    -ms-border-radius: $value;
+    -o-border-radius: $value;
+}
+
+
+@mixin trasition ($value) {
+    transition: all $value ease-in-out;
+    -webkit-transition: all $value ease-in-out;
+    -moz-transition: all $value ease-in-out;
+    -ms-transition: all $value ease-in-out;
+    -o-transition: all $value ease-in-out;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    @include trasition(0.5s);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+.container {
+    padding: 0px 60px;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+
+img {
+    max-width: 100%;
+    width: 100%;
+}
+
+a {
+    text-decoration: none
+}
+
+li {
+    list-style: none;
+}
+
+button {
+    border: none;
+}
+
+p {
+    color: #3A3A3A;
+    font-family: Poppins;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+.btn {
+    button {
+        @include border-radious(41px);
+        background: #E02C6D;
+        width: 200px;
+        height: 50px;
+
+        a {
+            color: #ffffff;
+
+            i {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    .container {
+        padding: 0px 20px;
+    }
+
+    .Header_section {
+        .nav_img {
+            h1 {
+                font-size: 17px;
+            }
+        }
+
+        .Mane {
+            .bar {
+                display: flex;
+
+                i {
+                    font-weight: bold;
+                }
+            }
+
+            .item {
+
+                ul {
+                    display: none;
+
+                    a {
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+
+                .buttons {
+                    .button_1 {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .Baner_section {
+        margin-top: 100px;
+
+        .ban_con {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .ban_conten {
+            order: 1;
+            text-align: center;
+
+            .ban_title {
+                font-size: 30px !important;
+            }
+        }
+    }
+
+    .Evn_section {
+        margin-top: 100px;
+
+        .evn_img {
+            text-align: center;
+            gap: 30px;
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    .Collection_section {
+        .colle_doxs {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+    #Footer_Baner_section{
+    margin-top: 150px;
+    margin: 0 auto;
+    .ban_con{
+            button{
+                background-color: #E02C6D;
+                padding: 20px 50px;
+                @include border-radious(0px);
+                i{
+                    padding: 0;
+                    margin: 0;
+                }
+                a{
+                    color: #ffffff;
+                    font-size: 15px;
+                }
+        }
+        *{
+            margin-top: 15px;
+        }
+        .ban_title{
+            font-size: 35px;
+            color: #0A0826;
+        }
+        .ban_img{
+            max-width: 90%;
+        }
+    }
+    .ban_img{
+        order: 2;
+        width: 100%;
+        img{
+            margin-left: 15px;
+        }
+    }
+}
+
+.Footer_section{
+    margin-top: 100px;
+    text-align: center; 
+     height: 300px;
+    background-color: #0A0826;
+    .conten{
+        *{
+            color: #ffffff;
+            margin-top: 10px;
+        }
+        h2{
+            font-size: 25px;
+        }
+        p{
+            font-weight: 400;
+            font-size: 13px;
+        }
+        .icon{
+            i{
+                margin-left: 20px;
+                padding: 10px;
+                background-color: #ffffff13;
+                @include border-radious(100px);
+            }
+            i:hover{
+                background-color: #ffffff67;
+            }
+        }
+        padding-top: 60px;
+    }
+}
+}
